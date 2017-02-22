@@ -102,7 +102,7 @@ Bridge.prototype.update = function(opts, callback) {
         }
         this.close(function() {
             this._map = mapnikPool.fromString(this._xml,
-                { size: 256, bufferSize: 256 },
+                { size: 256, bufferSize: 128 },
                 mopts);
             this._im = ImagePool(512);
             return callback();
